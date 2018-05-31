@@ -25,7 +25,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'List', component: ListPage },
       { title: 'ActionSheet', component: 'ActionSheetPage' },
-      { title: 'Slide', component: 'SlidePage' }
+      { title: 'Slide', component: 'SlidePage' },
+      { title: 'Nav', component: 'NavPage' },
     ];
 
   }
