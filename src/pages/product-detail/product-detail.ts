@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {Account} from "../../interfaces/Account";
+import {Product} from "../../interfaces/Product";
 
 /**
- * Generated class for the NavPage page.
+ * Generated class for the ProductDetailPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -11,18 +11,18 @@ import {Account} from "../../interfaces/Account";
 
 @IonicPage()
 @Component({
-  selector: 'page-nav',
-  templateUrl: 'nav.html',
+  selector: 'page-product-detail',
+  templateUrl: 'product-detail.html',
 })
-export class NavPage {
-  private account = {} as Account;
+export class ProductDetailPage {
+  product:Product;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.product = new Product(this.navParams.get('myProduct'));
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad NavPage');
-    this.account = this.navParams.get('account');
+    console.log('ionViewDidLoad ProductDetailPage');
   }
 
 }

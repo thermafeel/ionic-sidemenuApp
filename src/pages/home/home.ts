@@ -47,7 +47,7 @@ export class HomePage {
           placeholder: '이름 입력'
         },
         {
-          name: 'Email',
+          name: 'email',
           placeholder: 'E메일 입력'
         },
       ],
@@ -64,7 +64,7 @@ export class HomePage {
           handler: data => {
             console.log(data);
             this.accountData = {name:data.name, email:data.email};
-            this.navCtrl.push('NavPage',{account:data});
+            this.navCtrl.push('NavPage',{account:this.accountData});
           }
         }
       ]
