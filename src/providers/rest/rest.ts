@@ -31,4 +31,26 @@ export class RestProvider {
       return Observable.empty<Product[]>();
     });
   }
+
+  //Product 등록
+  public createProduct(product:Product):Observable<Product> {
+    return this.http.post(this.baseUrl + "/products", product)
+      .map(resp => new Product(resp))
+      .catch(err => Observable.empty<Product>());
+  }
+
+  //Product 수정
+  public updateProduct(product:Product):Observable<Product> {
+    return this.http.put(this.baseUrl + "/products/"+product.id, product)
+      .map(resp => new Product(resp))
+      .catch(err => Observable.empty<Product>());
+  }
+
+  //Product 삭제
+  public deleteProductById(productId:number):Observable<Product> {
+    return this.http.delete(this.baseUrl+"/products/"+productId)
+      .map(pro => new Product(pro))
+      .catch(err => Observable.empty<Product>());
+  }
+
 }

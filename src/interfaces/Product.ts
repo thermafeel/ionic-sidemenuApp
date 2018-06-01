@@ -8,4 +8,6 @@ export class Product {
   constructor(values: Object= {}){
     Object.assign(this, values);
   }
+
+
 }

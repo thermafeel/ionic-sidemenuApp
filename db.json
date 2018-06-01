@@ -29,6 +29,12 @@
       "name": "Bag",
       "cost": 100,
       "quantity": 50
+    },
+    {
+      "name": "오토바이",
+      "cost": "10000",
+      "quantity": "1",
+      "id": 6
     }
   ],
   "comments": [

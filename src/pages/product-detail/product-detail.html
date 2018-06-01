@@ -29,4 +29,11 @@
     <ion-label>Quantity :</ion-label>
     <ion-input type="text" [(ngModel)]="product.quantity"></ion-input>
   </ion-item>
+  <br/>
+  <button ion-button color="primary" icon-right (click)="saveProduct(product)">
+    Save <ion-icon name="md-checkmark" item-end></ion-icon>
+  </button>
+  <button *ngIf="product.id"  ion-button full color="danger" icon-right (click)="deleteProduct(product.id)">
+    Delete <ion-icon name="trash" item-end></ion-icon>
+  </button>
 </ion-content>
